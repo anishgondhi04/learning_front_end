@@ -1,23 +1,6 @@
-// implementing object array
-const allUsers =[{
-    firstName: "Anish",
-    gender: "male"
-},
-{
-    firstName: "harkirat",
-    gender: "male"
-},
-{
-    firstName: "Ananya",
-    gender: "female"
-},
-{
-    firstName: "kashish",
-    gender: "female"
-}]
-
-for(let i =0; i<allUsers.length; i++){
-    if(allUsers[i]["gender"] == "male"){
-        console.log(allUsers[i]["firstName"])
-    }
+function findsum(a, b){ // takes some parameters
+    return a+b; // does computation tasks and returns it
 }
+const value = findsum (1,2)
+console.log(value)
+
