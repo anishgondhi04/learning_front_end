@@ -1,9 +1,23 @@
-//printing even ages
-const ages = [21,22, 23,24, 25];
-const numberOfPeople = ages.length;
+// implementing object array
+const allUsers =[{
+    firstName: "Anish",
+    gender: "male"
+},
+{
+    firstName: "harkirat",
+    gender: "male"
+},
+{
+    firstName: "Ananya",
+    gender: "female"
+},
+{
+    firstName: "kashish",
+    gender: "female"
+}]
 
-for (let i= 0; i< numberOfPeople;i++){
-    if(ages[i] %2 == 0){
-        console.log(ages[i]);
+for(let i =0; i<allUsers.length; i++){
+    if(allUsers[i]["gender"] == "male"){
+        console.log(allUsers[i]["firstName"])
     }
 }
