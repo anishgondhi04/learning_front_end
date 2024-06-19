@@ -1,10 +1,7 @@
-let firstName = "Anish"
-let age = 22;
-let isMarried = true;
+let answer = 0;
 
-if(isMarried){
-    console.log(firstName+ " is Married");
+for(let i = 0; i<=100 i++){
+    answer += i;
 }
-else{
-    console.log(firstName+" is not Married");
-}
+
+console.log(answer);
