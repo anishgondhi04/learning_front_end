@@ -1,18 +1,4 @@
-// callback functions
-
-function sum (num1, num2, fnToCall){
-    let result = num1 + num2;
-    fnToCall(result);
+// Create a counter in Javascript that counts downs from 30 to 0
+for(let counter = 30; counter >= 0 ; counter--){
+    console.log(counter);
 }
-
-function displayResult(data){
-    console.log("result of the sum is : "+data);
-}
-
-function displayResultPassive(data){
-    console.log("Sum's result is : "+data);
-}
-
-const ans = sum(1,2,displayResult);
-const ans1 = sum(1,2,displayResultPassive);
-
