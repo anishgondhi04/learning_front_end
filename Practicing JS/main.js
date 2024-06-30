@@ -1,23 +1,6 @@
-// implementing callback
-// trying to avoid repetitions
-function square(n) {
-    return n * n;
+console.log('hi');
+function onDone(){
+    console.log("click the button");
 }
-
-function cube(n) {
-    return n * n * n;
-}
-
-function quad(n) {
-    return n * n * n * n;
-}
-
-function sumOfSomething(a, b, fn) {
-    let first = fn(a);
-    let second = fn(b);
-    return first + second;
-
-}
-
-let ans = sumOfSomething(1, 2, cube);
-console.log(ans);
+setTimeout(onDone,5000);
+console.log("Welcome to loupe");
