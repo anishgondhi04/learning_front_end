@@ -1,6 +1,12 @@
-console.log('hi');
-function onDone(){
-    console.log("click the button");
-}
-setTimeout(onDone,5000);
-console.log("Welcome to loupe");
+// syntax of promises
+
+function promisifiedMyOwnSetTimeout(duration){
+    const p = new Promise(function(resolve){
+        setTimeout(resolve, duration)
+    });
+    return p;
+ }
+ const ans = promisifiedMyOwnSetTimeout(1000);
+ans.then(function(){
+    console.log("timeout is done")
+})
