@@ -1,12 +1,10 @@
-// syntax of promises
-
-function promisifiedMyOwnSetTimeout(duration) {
-    const p = new Promise(function (resolve) {
-        setTimeout(resolve, duration)
-    });
-    return p;
+function someSyncTask1() {
+    console.log("some sync task 1");
 }
-const ans = promisifiedMyOwnSetTimeout(1000);
-ans.then(function () {
-    console.log("timeout is done")
-})
+function someSyncTask2() {
+    console.log("some sync task 2");
+}
+setTimeout(function (data) {
+    someSyncTask2(data)
+}, 1000)
+someSyncTask1();   
