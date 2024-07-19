@@ -1,20 +1,33 @@
-const express = require ("express");
-
+const express = require("express")
 const app = express();
 
-function sum (n){
-    let ans =0;
-    for(let i =0;i<=n;i++){
-        ans = ans + i;
+var users = [{
+    name:"john",
+    kidneys: [{
+        healthy: false
+    }]
+
+}];
+
+app.get("/",function(req,res){
+    // write logic
+    const johnkidneys = users[0].kidneys;
+    const numberOfKidneys = johnkidneys.length;
+
+    let numbeOfHealthyKidneys = 0;
+    for (let index = 0; index < numberOfKidneys; index++) {
+        if(johnkidneys[index].healthy){
+            numbeOfHealthyKidneys += 1;
+        }
+        
     }
-    return ans;
-}
+    const numbeOfUnHealthyKidneys = numberOfKidneys - numbeOfHealthyKidneys;
 
-app.get("/",function(req, res){
-    const n = req.query.n;
-    const ans = sum(n);
+    res.json({
+        numberOfKidneys,
+        numbeOfHealthyKidneys,
+        numbeOfUnHealthyKidneys
+    })
+});
 
-    res.send("hi your answer is " + ans);
-})
-
-app.listen(3000);
+app.listen(3000)
