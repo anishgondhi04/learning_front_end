@@ -48,4 +48,17 @@ app.put("/", function (req, res) {
     }
     res.json({})
 })
+
+app.delete("/", function (req, res) {
+    const newkidneys = [];
+    for (let index = 0; index < users[0].kidneys.length; index++) {
+        if (users[0].kidneys[index].healthy == true) {
+            newkidneys.push({
+                healthy: true
+            })
+        }
+    }
+    users[0].kidneys = newkidneys;
+    res.json({ msg: "Done!" })
+})
 app.listen(3000)
