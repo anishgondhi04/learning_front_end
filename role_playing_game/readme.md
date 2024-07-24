@@ -2,6 +2,12 @@
 
 Dragon Repeller is a simple text-based RPG (Role-Playing Game) where you must defeat a dragon that's preventing people from leaving the town. Navigate through different locations, fight monsters, and upgrade your weapons to become strong enough to face the dragon!
 
+## Play the Game
+
+You can play Dragon Repeller right now in your web browser:
+
+[Play Dragon Repeller](https://dragon-repeller-anishgondhi04.netlify.app/)
+
 ## Features
 
 - Explore different locations: town square, store, and cave
