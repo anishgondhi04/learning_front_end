@@ -1,19 +1,37 @@
-import { useState } from 'react'
+import { useState } from "react";
+import { useMemo } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [counter, setCounter] = useState(0);
+  const [sum, setSum] = useState(1);
+
+  let count = useMemo(() => {
+    let finalCount = 0;
+    for (let i = 1; i <= sum; i++) {
+      finalCount += i;
+    }
+    return finalCount;
+  }, [sum]);
 
   return (
     <>
-    <ButtonComponent count = {count} setCount = {setCount}></ButtonComponent>
+      <input
+        onChange={(e) => {
+          setSum(e.target.value);
+        }}
+      ></input>
+      <br></br>
+      Sum from 1 to {sum} is {count}
+      <br></br>
+      <button
+        onClick={() => {
+          setCounter(counter + 1);
+        }}
+      >
+        Counter {counter}
+      </button>
     </>
-  )
+  );
 }
 
-function ButtonComponent(state){
-  return <>
-  <button onClick = {state.setCount(state.count+1)}>Counter {state.count}</button>
-  </>
-}
-
-export default App
+export default App;
